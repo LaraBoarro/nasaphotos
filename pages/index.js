@@ -59,7 +59,6 @@ export default function Home() {
       <Head>
         <title>Descubra que foto a NASA tirou no dia do seu aniversário</title>
         <meta name="description" content="Descubra que foto a NASA tirou no dia do seu aniversário" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
@@ -110,7 +109,7 @@ export default function Home() {
           </div>
       </main>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className='modal-style'>
         <Modal.Body>
           <h3 className='title-modal'>Aqui está a foto tirada na data: {valueField} pela NASA</h3>
           <img src={dados.url} className='img-fluid'/>
@@ -119,7 +118,11 @@ export default function Home() {
           <Button variant="secondary" onClick={handleClose}>
             Fechar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button 
+          href={dados.url}
+          variant="primary"
+          target="_blank"
+          download>
             Baixar Imagem
           </Button>
         </Modal.Footer>

@@ -112,22 +112,22 @@ a {
   align-items: center;
 }
 
-.modal-content {
+.modal-style .modal-content {
   background-color: #000000e6;
   backdrop-filter: blur(30px);
 }
 
-.modal-footer {
+.modal-style .modal-footer {
   border:none;
 }
 
-.title-modal {
+.modal-style .title-modal {
   text-align: center;
   color: #fff;
   font-size: 1rem;
   padding: 1rem;
 }
-.modal {
+.modal-style.modal {
   background: #0000004f;
 }
 
@@ -135,19 +135,19 @@ a {
   width: 100%;
 }
 
-.form-control {
+.form-style .form-control {
   background: #000000a6;
   color: #d1d1d1;
   border: none;
 }
 
-.form-control:focus {
+.form-style .form-control:focus {
   background: #000000a6;
   color: #d1d1d1;
   border: none;
 }
 
-.btn-primary {
+.form-style .btn-primary {
   background: #0a1324;
   border: none;
   font-weight: bold;
