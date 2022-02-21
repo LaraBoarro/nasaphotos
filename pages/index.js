@@ -34,6 +34,7 @@ export default function Home() {
     today = yyyy + '-' + mm + '-' + dd;
 
     document.getElementById("datefield").setAttribute("max", today);
+    document.getElementById("datefield").setAttribute("value", today);
   });
 
   function handleChange(e){
@@ -48,7 +49,6 @@ export default function Home() {
 
     const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=9vFUPdpIcXIE0H2VsTXDs6JSFATkzXH7hDZ6mkdT&date=${valueField}`);
     const json = await response.json();
-    console.log(json)
     setDados(json);
 
     handleShow();
@@ -90,7 +90,7 @@ export default function Home() {
             <div className='box-textos'>
               <Container>
                 <Row className='justify-content-center'>
-                  <Col xs="10" md='8'>
+                  <Col xs="11" md='8'>
                     <h1>Descrubra qual foto foi tirada pela NASA no dia do seu aniversário</h1>
                     <p>Para revelar a foto, insira sua data de aniversário ou a data que preferir..</p>
 
